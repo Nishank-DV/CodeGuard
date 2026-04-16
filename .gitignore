@@ -1,41 +1,60 @@
-# Root .gitignore
-
-# Dependencies
-node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
 .venv/
-env/
 venv/
+env/
 ENV/
+
+# FastAPI / testing / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Build outputs
 dist/
 build/
-*.egg-info/
-
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
+.vite/
+.next/
+out/
 
 # Logs
 *.log
 logs/
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-
-# OS
+# OS / editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local databases / app data
+*.db
+*.sqlite
+*.sqlite3
+data/
+uploads/
+processed/
+temp/
+
+# Misc
+*.tmp
